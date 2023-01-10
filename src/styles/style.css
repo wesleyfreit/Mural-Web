@@ -85,10 +85,10 @@ body{
     position: absolute;
 }
 .fields label:nth-child(1)::after {
-    content: url("/src/assets/user.png");
+    content: url("../assets/user.png");
 }
 .fields label:nth-child(2)::after {
-    content: url("/src/assets/password.png");
+    content: url("../assets/password.png");
 }
 .findPassword {
     display: flex;
