@@ -1,0 +1,5 @@
+const exibir = () => {
+  
+};
+
+export { exibir};

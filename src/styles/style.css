@@ -1,0 +1,178 @@
+:root {
+    --cor-fundo: #1E1E1E;
+    --cor-hover: rgb(95, 95, 95);
+    --cor-primaria: rgb(59, 59, 201);
+    --cor-primaria-hover: rgb(55, 55, 247);
+    --cor-primaria-hover-text: rgb(75, 75, 230);
+    --cor-secundaria: rgb(0, 0, 0);
+    --cor-texto: rgb(255, 255, 255);
+    --cor-outline: rgb(63, 63, 63);
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: var(--cor-fundo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+#imagem-ifpb {
+    padding: 10px;
+    display: flex;
+    position: absolute;
+}
+#imagem-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imagem-logo img{
+    margin-top: 40px;
+}
+
+#formulario-login{
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    justify-content: center;
+    text-align: left;
+}
+
+#formulario-login input,
+#formulario-login h2,
+#formulario-login button {
+    border-radius: 3px;
+    border: none;
+}
+#formulario-login h2 {
+    font-weight: 100;
+    color: var(--cor-texto);
+}
+#formulario-login .fields input {
+    background-color: var(--cor-fundo);
+    margin-top: 20px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid var(--cor-outline);
+    padding-left: 45px;
+    color: var(--cor-texto);
+}
+#formulario-login .fields input:hover{
+    border: 1px solid var(--cor-hover);
+}
+#formulario-login .fields input:focus {
+    border: 1px solid var(--cor-primaria);
+    
+}
+
+.fields label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.fields label::after {
+    left: 10px;
+    bottom: 9px;
+    position: absolute;
+}
+.fields label:nth-child(1)::after {
+    content: url("/src/assets/user.png");
+}
+.fields label:nth-child(2)::after {
+    content: url("/src/assets/password.png");
+}
+.findPassword {
+    display: flex;
+    justify-content: flex-end;
+}
+#findPassword {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: var(--cor-primaria);
+    user-select: none;
+    transition: 0.3s;
+    font-weight: 900;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#findPassword:hover {
+    color: var(--cor-primaria-hover-text);
+    text-decoration: underline;
+}
+.connected label{
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+.connected input{
+    height: 15px;
+    width:15px;
+    appearance: none;
+    border-radius: 3px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: var(--cor-outline);
+    cursor: pointer;
+    margin-top: 2px;
+}
+.connected span {
+    color: var(--cor-texto);
+    padding-left: 5px;
+    user-select: none;
+    font-size:small;
+}
+.connected input:checked{
+    background-color: var(--cor-primaria);
+}
+.connected input:checked + span::before {
+    content: '\2713';
+    display: block;
+    color: var(--cor-texto);
+    position: absolute;
+    left: 2px;
+}
+.enterButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+.enterButton button{
+    background-color: var(--cor-primaria);
+    padding: 15px 15px;
+    color: var(--cor-texto);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.enterButton button:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.newAccount {
+    margin-top: 10px;
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: small;
+    user-select: none;
+}
+.newAccount span {
+    color: var(--cor-primaria);
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.newAccount span:hover {
+    color: var(--cor-primaria-hover-text);
+
+}
