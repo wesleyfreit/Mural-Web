@@ -43,11 +43,13 @@
 
 .header-nav {
     position: fixed;
-    height: 70px;
+    height: 100px;
     z-index: 100;
 }
 
 .menuInside {
+    background-color: var(--cor-fundo);
+    border-right: 1px solid var(--cor-hover);
     display: none;
 }
 
@@ -60,7 +62,7 @@
 @keyframes slidein {
     from {
         margin-left: -50%;
-        width: 300%;
+        width: 100%;
     }
 
     to {
@@ -72,17 +74,17 @@
 @keyframes slideof {
     from {
         margin-left: 0%;
-        width: 300%;
+        width: -100%;
     }
 
     to {
-        margin-left: -100%;
-        width: 100%;
+        margin-left: -50%;
+        width: -100%;
     }
 }
 
 .header-nav-background {
-    margin-top: 90vh;
+    margin-top: 100vh;
     position: fixed;
     min-width: 100vw;
     height: 110vh;
@@ -91,20 +93,13 @@
     display: none;
 }
 
-.lupaBusca,
-.menuOptions {
-    width: fit-content;
-    background-color: var(--cor-fundo);
-    border-right: 1px solid var(--cor-hover);
-}
-
 .menuOptions {
     border-top: 1px solid var(--cor-hover);
     padding-top: 20px;
 }
 
 .lupaBusca {
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -127,8 +122,6 @@
 
 .lupaBusca input {
     color: var(--cor-texto);
-    width: fit-content;
-    padding-right: 30px;
 }
 
 .lupaBusca input::placeholder {
@@ -160,8 +153,7 @@
 }
 
 .options li {
-    padding: 10px 26.5px;
-
+    padding: 10px 20px;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.1s;
