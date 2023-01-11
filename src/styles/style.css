@@ -86,13 +86,10 @@ body {
     background-color: var(--cor-fundo);
     border-right: 1px solid var(--cor-hover);
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .header-nav.active .menuInside {
-    display: flex;
+    display: block;
     animation-duration: 0.5s;
     animation-name: slidein;
 }
@@ -132,7 +129,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 10px 5px;
-    width: min-content;
 }
 
 .lupaBusca h2 {
@@ -150,7 +146,7 @@ body {
 
 .lupaBusca input {
     color: var(--cor-texto);
-    padding: 15px 5px;
+    padding: 15px 10px;
 }
 
 .lupaBusca input::placeholder {
