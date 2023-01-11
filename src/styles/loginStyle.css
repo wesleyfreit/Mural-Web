@@ -1,34 +1,7 @@
-:root {
-    --cor-fundo: #1e1e1e;
-    --cor-hover: rgb(95, 95, 95);
-    --cor-primaria: rgb(59, 59, 201);
-    --cor-primaria-hover: rgb(55, 55, 247);
-    --cor-primaria-hover-text: rgb(75, 75, 230);
-    --cor-secundaria: rgb(0, 0, 0);
-    --cor-texto: rgb(255, 255, 255);
-    --cor-outline: rgb(63, 63, 63);
-    --cor-balao: rgba(50, 93, 126, 0.884);
-}
-
-* {
-    -webkit-tap-highlight-color: transparent;
-    font-family: "Poppins", sans-serif;
-    margin: 0 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
-
-body {
-    background-color: var(--cor-fundo);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    overflow-y: auto;
-}
+@import url("./style.css");
 
 #imagem-ifpb {
-    padding: 10px;
+    margin-top: 20px;
     display: flex;
     position: absolute;
 }
@@ -40,7 +13,7 @@ body {
 }
 
 #imagem-logo img {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 #formulario-login {
@@ -62,6 +35,7 @@ body {
 #formulario-login h2 {
     font-weight: 100;
     color: var(--cor-texto);
+    
 }
 
 #formulario-login .fields input {
@@ -90,16 +64,16 @@ body {
 
 .fields label::after {
     left: 10px;
-    bottom: 9px;
+    bottom: 10px;
     position: absolute;
 }
 
 .fields label:nth-child(1)::after {
-    content: url("../assets/user.png");
+    content: url("../assets/user.svg");
 }
 
 .fields label:nth-child(2)::after {
-    content: url("../assets/password.png");
+    content: url("../assets/password.svg");
 }
 
 .findPassword {
@@ -112,7 +86,6 @@ body {
     margin-bottom: 10px;
     background-color: transparent;
     color: var(--cor-primaria);
-    user-select: none;
     transition: 0.3s;
     font-weight: 900;
     text-decoration: underline;
@@ -145,7 +118,6 @@ body {
 .connected span {
     color: var(--cor-texto);
     padding-left: 5px;
-    user-select: none;
     font-size: small;
 }
 
@@ -185,7 +157,6 @@ body {
     color: var(--cor-texto);
     text-align: center;
     font-size: small;
-    user-select: none;
 }
 
 .newAccount span {
