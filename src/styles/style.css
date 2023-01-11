@@ -1,28 +1,189 @@
 @import url("./loginStyle.css");
 
-.navigationBar{
-    border-bottom: 1px solid var(--cor-hover);
+.container {
     display: flex;
-    color: var(--cor-texto);
+    flex-direction: column;
+}
+
+.document {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-primaria);
 }
-#openMenu, #openUser{
+
+#openMenu,
+#openUser {
     background-color: transparent;
     outline: none;
     border: none;
     margin: 15px 20px;
+    cursor: pointer;
 }
-.container {
+
+.hidden {
+    display: none;
+}
+
+#openMenu:hover .hidden {
+    display: inline;
+}
+
+#openMenu:hover .view {
+    display: none;
+}
+
+.header-nav {
+    position: fixed;
+    height: 70px;
+    z-index: 100;
+}
+
+.menuInside {
+    display: none;
+}
+
+.header-nav.active .menuInside {
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -50%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slideof {
+    from {
+        margin-left: 0%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: -100%;
+        width: 100%;
+    }
+}
+
+.header-nav-background {
+    margin-top: 90vh;
+    position: fixed;
+    min-width: 100vw;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.829);
+    z-index: 90;
+    display: none;
+}
+
+.lupaBusca,
+.menuOptions {
+    width: fit-content;
+    background-color: var(--cor-fundo);
+    border-right: 1px solid var(--cor-hover);
+}
+
+.menuOptions {
+    border-top: 1px solid var(--cor-hover);
+    padding-top: 20px;
+}
+
+.lupaBusca {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.lupaBusca h2 {
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.lupaBusca button,
+.lupaBusca input {
+    outline: none;
+    border: none;
+    background-color: var(--cor-hover);
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+
+.lupaBusca input {
+    color: var(--cor-texto);
+    width: fit-content;
+    padding-right: 30px;
+}
+
+.lupaBusca input::placeholder {
+    color: rgb(221, 221, 221);
+}
+
+.lupaBusca input:focus {
+    box-shadow: 0 2px 1px var(--cor-sombra);
+}
+
+.lupaBusca button {
+    position: fixed;
+    margin-left: -30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.lupaBusca button:hover {
+    background-color: var(--cor-outline);
+}
+
+.options {
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10px;
+    text-align: center;
+}
+
+.options li {
+    padding: 10px 26.5px;
+
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.1s;
+}
+
+.options li:hover {
+    border-top: 1px solid var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+.events-list {
     color: var(--cor-texto);
     margin: 10px 30px;
 }
-.container h2 {
+
+.events-list h2 {
     font-weight: lighter;
     margin-bottom: 10px;
     font-size: large;
 }
-.container button{
+
+.events-list button {
     border: none;
     outline: none;
     background-color: var(--cor-primaria);
@@ -30,17 +191,20 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.events{
+
+.events {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:600px;
+    height: 600px;
 }
+
 .events ul {
     overflow-y: auto;
     white-space: nowrap;
 }
-.events ul li{
+
+.events ul li {
     margin: 15px 0;
     background-color: var(--cor-balao);
     box-shadow: 0 0 1px var(--cor-secundaria);
@@ -49,14 +213,17 @@
     flex-direction: column;
     align-items: center;
 }
-.events h3{
+
+.events h3 {
     margin-top: 10px;
 }
-.events p{
-    font-size:small;
+
+.events p {
+    font-size: small;
     margin-top: -5px;
 }
-.events button{
+
+.events button {
     box-shadow: 0 0 2px var(--cor-secundaria);
     margin-top: 5px;
     margin-bottom: 10px;
@@ -64,7 +231,8 @@
     border-radius: 10px;
     padding: 3px 5px;
 }
-.events button:hover{
+
+.events button:hover {
     background-color: var(--cor-primaria-hover);
 }
 

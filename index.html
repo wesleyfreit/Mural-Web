@@ -1,74 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <link rel="shortcut icon" href="./src/assets/icon-site.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="shortcut icon" href="./src/assets/icon-site.png" type="image/x-icon" />
     <title>Home</title>
 </head>
-<body> 
-    <main>
-        <nav class="navigationBar">
-            <button id="openMenu">
-                <img src="./src/assets/menu.png" >
-            </button>
-            <h2>Mural Web</h2>
-            <button id="openUser">
-                <a href="./views/login.html">
-                    <img src="./src/assets/user-id.png">
-                </a>
-            </button>
-        </nav>
-        <div class="container">
-            <h2>Esta semana</h2>
-            <div class="events">
-                <ul>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                    <li>
-                        <h3>Evento: XXXXX-XXXX</h3>
-                        <p>Data: xx/xx/xxxx</p>
-                        <p>Local: xxxx xxxxx</p>
-                        <button>Mais informações</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="addEvent">
-                <button id="buttonAdd">Adicionar Evento</button>
-            </div>
+
+<body>
+    <div class="container">
+        <div class="document">
+            <header id="header">
+                <nav class="header-nav" id="header-nav">
+                    <div class="menuInside">
+                        <div class="lupaBusca">
+                            <h2>Busca</h2>
+                            <div id="lupaBusca">
+                                <input id="searchBar" type="text" maxlength="20px" placeholder="digite para buscar" />
+                                <button id="searchButton">
+                                    <img src="./src/assets/search icon.png" alt="lupa" height="10px" title="Busca" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="menuOptions">
+                            <ul class="options">
+                                <li>Página Inicial</li>
+                                <li>Eventos Acadêmicos</li>
+                                <li>Eventos Estudantis</li>
+                                <li>Calendário Acadêmico</li>
+                                <li>Sobre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div id="header-nav-open">
+                    <button id="openMenu">
+                        <img src="./src/assets/menu.svg" class="view" />
+                        <img src="./src/assets/menu-hover.svg" class="hidden" />
+                    </button>
+                </div>
+                <div class="header-logo">
+                    <h2>Mural Web</h2>
+                </div>
+                <div id="header-user-open">
+                    <button id="openUser">
+                        <a href="./views/login.html">
+                            <img src="./src/assets/user-id.png" />
+                        </a>
+                    </button>
+                </div>
+                <div class="header-nav-background"></div>
+            </header>
+            <main>
+                <div class="events-list">
+                    <h2>Esta semana</h2>
+                    <div class="events">
+                        <ul>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                            <li>
+                                <h3>Evento: XXXXX-XXXX</h3>
+                                <p>Data: xx/xx/xxxx</p>
+                                <p>Local: xxxx xxxxx</p>
+                                <button>Mais informações</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addEvent">
+                        <button id="buttonAdd">Adicionar Evento</button>
+                    </div>
+                </div>
+            </main>
         </div>
-    </main>
+    </div>
     <script type="module" src="./src/scripts/index.js"></script>
 </body>
+
 </html>
