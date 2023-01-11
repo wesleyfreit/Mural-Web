@@ -1,5 +1,10 @@
+//import { setUser } from "./dados";
+
 const exibir = () => {
-  window.location.assign("https://wesleyfreit.github.io/Mural-Web/views/login");
+  const main = document.querySelector("main");
+  //main.location.href = "https://wesleyfreit.github.io/Mural-Web/views/login";
+  window.location.href = "../../views/login.html";
+  //return setUser;
 };
 
-export { exibir};
+export { exibir };
