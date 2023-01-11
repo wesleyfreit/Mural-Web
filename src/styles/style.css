@@ -86,10 +86,13 @@ body {
     background-color: var(--cor-fundo);
     border-right: 1px solid var(--cor-hover);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-nav.active .menuInside {
-    display: block;
+    display: flex;
     animation-duration: 0.5s;
     animation-name: slidein;
 }
@@ -136,10 +139,10 @@ body {
 .lupaBusca {
     padding: 20px 0;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    margin: 10px 50px;
+    align-items: center;
+    margin: 10px 15px;
+    width: min-content;
 }
 
 .lupaBusca h2 {
