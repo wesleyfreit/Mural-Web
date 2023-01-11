@@ -121,16 +121,6 @@ body {
     }
 }
 
-.header-nav-background {
-    margin-top: 100vh;
-    position: fixed;
-    min-width: 100vw;
-    height: 110vh;
-    background-color: rgba(0, 0, 0, 0.829);
-    z-index: 90;
-    display: none;
-}
-
 .menuOptions {
     border-top: 1px solid var(--cor-hover);
     padding-top: 20px;
@@ -141,7 +131,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 15px;
+    margin: 10px 5px;
     width: min-content;
 }
 
@@ -156,12 +146,11 @@ body {
     border: none;
     background-color: var(--cor-hover);
     border-radius: 10px;
-
 }
 
 .lupaBusca input {
     color: var(--cor-texto);
-    padding: 15px;
+    padding: 15px 5px;
 }
 
 .lupaBusca input::placeholder {
@@ -184,18 +173,16 @@ body {
     background-color: var(--cor-outline);
 }
 
-
 .options {
     color: var(--cor-texto);
     display: flex;
     flex-direction: column;
     height: 100vh;
-    gap: 10px;
     text-align: center;
 }
 
 .options li {
-    padding: 10px 20px;
+    padding: 10px 5px;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.1s;
@@ -204,6 +191,16 @@ body {
 .options li:hover {
     border-top: 1px solid var(--cor-primaria);
     border-bottom: 1px solid var(--cor-primaria);
+}
+
+.header-nav-background {
+    margin-top: 90vh;
+    position: fixed;
+    min-width: 100vw;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.829);
+    z-index: 90;
+    display: none;
 }
 
 .events-list {
