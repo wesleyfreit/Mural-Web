@@ -139,7 +139,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin: 10px 20px;
+    margin: 10px 50px;
 }
 
 .lupaBusca h2 {
@@ -153,11 +153,12 @@ body {
     border: none;
     background-color: var(--cor-hover);
     border-radius: 10px;
-    padding: 10px;
+
 }
 
 .lupaBusca input {
     color: var(--cor-texto);
+    padding: 15px;
 }
 
 .lupaBusca input::placeholder {
@@ -170,14 +171,16 @@ body {
 
 .lupaBusca button {
     position: fixed;
-    margin-left: -30px;
+    margin-left: -44px;
     transition: 0.3s;
     cursor: pointer;
+    padding: 12px;
 }
 
 .lupaBusca button:hover {
     background-color: var(--cor-outline);
 }
+
 
 .options {
     color: var(--cor-texto);
