@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     color: var(--cor-texto);
-    border-bottom: 1px solid var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-hover);
 }
 
 #openMenu,
@@ -104,6 +104,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 10px;
 }
 
 .lupaBusca h2 {
@@ -117,7 +118,7 @@
     border: none;
     background-color: var(--cor-hover);
     border-radius: 10px;
-    padding: 7px 10px;
+    padding: 10px;
 }
 
 .lupaBusca input {
@@ -129,7 +130,7 @@
 }
 
 .lupaBusca input:focus {
-    box-shadow: 0 2px 1px var(--cor-sombra);
+    box-shadow: 0 2px 1px var(--cor-primaria);
 }
 
 .lupaBusca button {
