@@ -7,7 +7,9 @@
     --cor-secundaria: rgb(0, 0, 0);
     --cor-texto: rgb(255, 255, 255);
     --cor-outline: rgb(63, 63, 63);
-    --cor-balao: rgba(50, 93, 126, 0.884);
+    --cor-balao: rgba(99, 99, 99, 0.664);
+    --cor-botao-balao: rgb(0, 90, 126);
+    --cor-botao-balao-hover: rgb(0, 79, 110);
 }
 
 * {
@@ -239,6 +241,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.events ul li:hover{
+    box-shadow: 0 0 5px var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
 }
 
 .events h3 {
@@ -252,6 +260,7 @@ body {
 
 .events button {
     box-shadow: 0 0 2px var(--cor-secundaria);
+    background-color: var(--cor-botao-balao);
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: x-small;
@@ -260,7 +269,7 @@ body {
 }
 
 .events button:hover {
-    background-color: var(--cor-primaria-hover);
+    background-color: var(--cor-botao-balao-hover);
 }
 
 .addEvent {
@@ -282,4 +291,39 @@ body {
 
 .addEvent button:hover {
     background-color: var(--cor-primaria-hover);
+}
+
+@media screen and (min-width: 768px) {
+    .events ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .events ul li {
+        margin: 20px;
+        padding: 20px;
+    }
+    .events h3 {
+        font-size: x-large;
+    }
+    .events p {
+        font-size: medium;
+    }
+    .events button{
+        font-size: small;
+    }
+    .addEvent {
+        border-top: 1px solid var(--cor-hover);
+        align-items: center;
+        justify-content: center;
+    }
+    .addEvent button {
+        padding: 15px 100px;
+    }
+    .menuOptions {
+        margin: 0 20px;
+    }
 }
