@@ -1,28 +1,134 @@
 @import url("./style.css");
 
-#imagem-ifpb {
-    margin-top: 20px;
+.container{
     display: flex;
+    flex-direction: row;
+}
+
+.areacard{
+    margin: 0 auto;
+    width: 50vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+    
+}
+
+.slides {
+    width: 50vw;
     position: absolute;
+    display: flex;
+    overflow: hidden;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5vw;
+    transition: 1s;
+}
+
+.slide h1, .slide h3{
+    color: var(--cor-texto-botao);
+    width: 40vw;
+}
+
+.manual-navigation, 
+.auto-navigation {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: -40px;
+}
+
+.manual-btn,
+.auto-navigation div{
+    border: 2px solid var(--cor-texto-botao);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.manual-btn:not(:last-child), 
+.auto-navigation div:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: var(--cor-texto-botao);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -50vw;
+}
+
+#radio3:checked~.first {
+    margin-left: -100vw;
+}
+
+.auto-navigation div{
+    border-color: var(--cor-primaria);
+}
+
+#radio1:checked ~ .auto-navigation .auto-btn1{
+    background-color: var(--cor-texto-botao);
+}
+
+#radio2:checked~.auto-navigation .auto-btn2 {
+    background-color: var(--cor-texto-botao);
+}
+
+#radio3:checked~.auto-navigation .auto-btn3 {
+    background-color: var(--cor-texto-botao);
+}
+
+.arealogin{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #imagem-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #6f42c1;
 }
-
 #imagem-logo img {
     margin-top: 60px;
 }
+#imagem-logo h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 3rem;
+    color: #6f42c1;
+}
 
 #formulario-login {
-    margin-top: -30px;
     display: flex;
     flex-direction: column;
-    margin: 0 50px;
     justify-content: center;
-    text-align: left;
+    align-items: center;
+}
+#center-formulario{
+    width: 30vmax;
 }
 
 #formulario-login input,
@@ -42,18 +148,20 @@
     background-color: var(--cor-fundo);
     margin-top: 20px;
     padding: 15px;
-    outline: none;
-    border: 1px solid var(--cor-outline);
+    outline:1px solid var(--cor-outline);
+    border: 2px solid transparent;
     padding-left: 45px;
     color: var(--cor-texto);
 }
 
 #formulario-login .fields input:hover {
-    border: 1px solid var(--cor-hover);
+    border: 2px solid var(--cor-hover);
+    outline: 1px solid var(--cor-hover);
 }
 
 #formulario-login .fields input:focus {
-    border: 1px solid var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    outline: 1px solid var(--cor-primaria);
 }
 
 .fields label {
@@ -81,22 +189,6 @@
     justify-content: flex-end;
 }
 
-#findPassword {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    color: var(--cor-primaria);
-    transition: 0.3s;
-    font-weight: 900;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#findPassword:hover {
-    color: var(--cor-primaria-hover-text);
-    text-decoration: underline;
-}
-
 .connected label {
     display: inline-flex;
     cursor: pointer;
@@ -106,11 +198,7 @@
 .connected input {
     height: 15px;
     width: 15px;
-    appearance: none;
     border-radius: 3px;
-    outline: none;
-    transition-duration: 0.3s;
-    background-color: var(--cor-outline);
     cursor: pointer;
     margin-top: 2px;
 }
@@ -119,18 +207,6 @@
     color: var(--cor-texto);
     padding-left: 5px;
     font-size: small;
-}
-
-.connected input:checked {
-    background-color: var(--cor-primaria);
-}
-
-.connected input:checked+span::before {
-    content: "\2713";
-    display: block;
-    color: var(--cor-texto);
-    position: absolute;
-    left: 3px;
 }
 
 .enterButton {
@@ -143,13 +219,19 @@
 .enterButton button {
     background-color: var(--cor-primaria);
     padding: 15px 15px;
-    color: var(--cor-texto);
+    color: var(--cor-texto-botao);
     transition: 0.3s;
     cursor: pointer;
 }
 
 .enterButton button:hover {
     background-color: var(--cor-primaria-hover);
+}
+
+.enterButton button:active {
+    transition: 0s;
+    background-color: var(--cor-primaria-active);
+    outline: 3px solid var(--cor-primaria);
 }
 
 .newAccount {
@@ -159,14 +241,34 @@
     font-size: small;
 }
 
-.newAccount span {
+.newAccount span a, #findPassword a{
+    margin-top: 5px;
+    margin-bottom: 10px;
     color: var(--cor-primaria);
     transition: 0.3s;
     cursor: pointer;
     font-weight: 900;
     text-decoration: underline;
+    font-size: small;
 }
 
-.newAccount span:hover {
-    color: var(--cor-primaria-hover-text);
+.newAccount span a:hover, #findPassword a:hover {
+    color: var(--cor-primaria-hover);
+}
+
+.newAccount span a:active, #findPassword a:active {
+    transition: 0s;
+    color: var(--cor-primaria-active);
+}
+
+@media screen and (max-width: 720px ){
+    .areacard{
+        display: none;
+    }
+    .arealogin {
+        width: 100vw;
+    }
+    #center-formulario{
+        width: 70vw;
+    }
 }

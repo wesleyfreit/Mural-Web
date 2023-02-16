@@ -1,19 +1,13 @@
 :root {
-    --cor-fundo: #ffffff;
-    --cor-texto: rgb(0, 0, 0);
-    --cor-texto-botao: white;
-
-
-
+    --cor-fundo: #1e1e1e;
     --cor-hover: rgb(95, 95, 95);
-    --cor-primaria: #751cec;
-    --cor-primaria-hover: #6f42c1;
-    --cor-primaria-active: #8d69d1;
-    --cor-secundaria: rgb(254, 216, 50);
+    --cor-primaria: rgb(59, 59, 201);
+    --cor-primaria-hover: rgb(55, 55, 247);
+    --cor-primaria-hover-text: rgb(75, 75, 230);
+    --cor-secundaria: rgb(0, 0, 0);
+    --cor-texto: rgb(255, 255, 255);
     --cor-outline: rgb(63, 63, 63);
-    --cor-balao: rgba(99, 99, 99, 0.664);
-    --cor-botao-balao: rgb(0, 90, 126);
-    --cor-botao-balao-hover: rgb(0, 79, 110);
+    --cor-balao: rgba(50, 93, 126, 0.884);
 }
 
 * {
@@ -92,10 +86,13 @@ body {
     background-color: var(--cor-fundo);
     border-right: 1px solid var(--cor-hover);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-nav.active .menuInside {
-    display: block;
+    display: flex;
     animation-duration: 0.5s;
     animation-name: slidein;
 }
@@ -135,6 +132,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 10px 5px;
+    width: min-content;
 }
 
 .lupaBusca h2 {
@@ -152,7 +150,7 @@ body {
 
 .lupaBusca input {
     color: var(--cor-texto);
-    padding: 15px 10px;
+    padding: 15px 5px;
 }
 
 .lupaBusca input::placeholder {
@@ -245,12 +243,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    border: 1px solid transparent;
-}
-.events ul li:hover{
-    box-shadow: 0 0 5px var(--cor-secundaria);
-    border: 1px solid var(--cor-secundaria);
 }
 
 .events h3 {
@@ -264,7 +256,6 @@ body {
 
 .events button {
     box-shadow: 0 0 2px var(--cor-secundaria);
-    background-color: var(--cor-botao-balao);
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: x-small;
@@ -273,7 +264,7 @@ body {
 }
 
 .events button:hover {
-    background-color: var(--cor-botao-balao-hover);
+    background-color: var(--cor-primaria-hover);
 }
 
 .addEvent {
@@ -295,39 +286,4 @@ body {
 
 .addEvent button:hover {
     background-color: var(--cor-primaria-hover);
-}
-
-@media screen and (min-width: 768px) {
-    .events ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    .events ul li {
-        margin: 20px;
-        padding: 20px;
-    }
-    .events h3 {
-        font-size: x-large;
-    }
-    .events p {
-        font-size: medium;
-    }
-    .events button{
-        font-size: small;
-    }
-    .addEvent {
-        border-top: 1px solid var(--cor-hover);
-        align-items: center;
-        justify-content: center;
-    }
-    .addEvent button {
-        padding: 15px 100px;
-    }
-    .menuOptions {
-        margin: 0 20px;
-    }
 }

@@ -1,4 +1,5 @@
 //import { setUser } from "./dados";
+let count = 1;
 
 const exibir = () => {
   const main = document.querySelector("main");
@@ -7,4 +8,12 @@ const exibir = () => {
   //return setUser;
 };
 
-export { exibir };
+const transicao = () => {
+  count++;
+  if(count > 4){
+    count = 1;
+  }
+  document.querySelector("#radio" + count).checked = true;
+}
+
+export { exibir, transicao };

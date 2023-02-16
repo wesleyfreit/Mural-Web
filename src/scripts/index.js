@@ -8,6 +8,11 @@ import * as menu from "./menu.js";
   }
 });*/
 
+document.querySelector("#radio1").checked = true;
+setInterval(() => {
+  login.transicao();
+}, 5000);
+
 document.querySelector("#openMenu").addEventListener("click", menu.exibir);
 
 document.querySelector(".header-nav-background").addEventListener("click", menu.fechar);
